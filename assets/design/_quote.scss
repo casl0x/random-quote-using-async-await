@@ -1,0 +1,30 @@
+body {
+    background: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.quotes {
+    background: $bg-quote-color;
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2vh;
+    border-radius: 16px;
+    &-txt {
+        font: {
+            family: $quote-font;
+            size: 25px;
+        }
+    }
+    &-author {
+        font: {
+            family: $quote-font;
+            size: 20px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.btn {
+    width: 10vw;
+    padding: 0.5rem;
+    background: $btn-color;
+    border: none;
+    position: relative;
+    span {
+        font: {
+        size: 15px;
+        family: $txt-font;
+        style: italic;
+        }
+    }
+    cursor: pointer;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: $btn-hover-color;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+    &:hover {
+        color: $btn-color;
+        &::before {
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+    }
+}
